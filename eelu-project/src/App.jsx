@@ -13,13 +13,14 @@ import Landing from './Pages/Landing';
 import NotFound from './Pages/NotFound'; 
 import Sidebar from "./components/Sidebar";
  import SavingGoal from "./Pages/SavingGoal";
+//  import inpit from "./Pages/input";
 
 
 
 function App() {
   const location = useLocation();
 
-  const noSidebarRoutes = ["/"];
+  const noSidebarRoutes = ["/","/input","/login","/Welcome","/SignUP"];
 
   const showSidebar = !noSidebarRoutes.includes(location.pathname);
 
@@ -41,6 +42,7 @@ function App() {
           <Route path='/Welcome' element={<Welcome />} />
           <Route path='/saving-goal' element={<SavingGoal />} />
           <Route path='/NotFound' element={<NotFound />} />
+
         </Routes>
       </div>
     </div>
