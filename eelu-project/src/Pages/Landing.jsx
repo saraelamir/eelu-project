@@ -10,7 +10,6 @@ const Landing = () => {
   return (
     <>
       <Navbar />
-
       <div className="hero-container">
         <div className="hero">
           <h1>Take Charge Of Your Financial Journey</h1>

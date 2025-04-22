@@ -17,27 +17,22 @@ import SavingGoal from "./Pages/SavingGoal";
 function App() {
   const location = useLocation();
 
-  // Define routes where the sidebar should be hidden (using lowercase for consistency)
-  const noSidebarRoutes = ["/", "/welcome"];
+  const noSidebarRoutes = ["/", "/welcome","/input","/signup","/login","/landing"];
 
-  // Normalize the current path to lowercase
   const currentPath = location.pathname.toLowerCase();
 
-  // Check if the current path is in the noSidebarRoutes array (case-insensitive)
   const showSidebar = !noSidebarRoutes.includes(currentPath);
 
   return (
     <div className="app-container">
-      {showSidebar && (
-        <div className="sidebar-container">
-          <Sidebar />
-        </div>
+      {showSidebar && ( <div className="sidebar-container"> <Sidebar /></div>
       )}
 
       <div className={`content ${showSidebar ? "with-sidebar" : "full-width"}`}>
         <Routes>
-          {/* Ensure route paths are lowercase to match the noSidebarRoutes */}
           <Route path="/" element={<Landing />} />
+          <Route path="/landing" element={<Landing />} />
+
           <Route path="/home" element={<Home />} />
           <Route path="/feedback" element={<Feedback />} />
           <Route path="/help" element={<Help />} />

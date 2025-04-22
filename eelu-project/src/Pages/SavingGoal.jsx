@@ -50,7 +50,7 @@ export default function SavingGoalsPage() {
             {/* Left Box */}
             <div className="col-12 col-md-3 mb-2 mb-md-0">
               <div className="bg-info text-white p-3 rounded text-center h-100 rounded-4">
-                <h4 className="mb-2">{goal.title}</h4>
+                <h4 className="mb-2 ">{goal.title}</h4>
                 <small>{goal.dateRange}</small>
               </div>
             </div>

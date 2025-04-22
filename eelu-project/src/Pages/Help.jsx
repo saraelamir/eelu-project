@@ -1,6 +1,6 @@
-// HelpPage.jsx
 import { useState, useEffect } from "react";
 import { Container } from "react-bootstrap";
+import styles from './Help.module.css';  // استيراد ملف CSS موديل
 
 export default function HelpPage() {
   const [openIndex, setOpenIndex] = useState({ category: -1, question: -1 });
@@ -94,15 +94,11 @@ export default function HelpPage() {
   return (
     <div style={{ background: "var(--gradient-blue)", minHeight: "100vh" }}>
       <Container className="py-5 px-4">
-        <h1 className="mb-4" style={styles.mainTitle}>
-          Help Page
-        </h1>
+        <h1 className={`mb-4 ${styles.mainTitle}`}>Help Page</h1>
 
         {faqData.map((category, catIndex) => (
           <div key={catIndex} className="mb-5">
-            <h2 className="mb-4" style={styles.categoryTitle}>
-              {category.category}
-            </h2>
+            <h2 className={`mb-4 ${styles.categoryTitle}`}>{category.category}</h2>
 
             {category.items.map((item, itemIndex) => {
               const questionNumber = (itemIndex + 1)
@@ -115,8 +111,7 @@ export default function HelpPage() {
               return (
                 <div
                   key={itemIndex}
-                  className="faq-item mb-3 p-4 rounded-3"
-                  style={styles.faqItem}
+                  className={`faq-item mb-3 p-4 rounded-3 ${styles.faqItem}`}
                 >
                   <div
                     className="d-flex justify-content-between align-items-center"
@@ -129,16 +124,16 @@ export default function HelpPage() {
                     }
                   >
                     <div className="d-flex align-items-center gap-4">
-                      <span style={styles.numberBadge}>{questionNumber}</span>
-                      <h3 className="mb-0" style={styles.question}>
+                      <span className={styles.numberBadge}>{questionNumber}</span>
+                      <h3 className={`mb-0 ${styles.question}`}>
                         {item.question}
                       </h3>
                     </div>
-                    <span style={styles.toggleIcon}>{isOpen ? "-" : "+"}</span>
+                    <span className={styles.toggleIcon}>{isOpen ? "-" : "+"}</span>
                   </div>
 
                   {isOpen && (
-                    <p className="mt-3 mb-0" style={styles.answer}>
+                    <p className={`mt-3 mb-0 ${styles.answer}`}>
                       {item.answer}
                     </p>
                   )}
@@ -150,8 +145,7 @@ export default function HelpPage() {
 
         {showScroll && (
           <button
-            className="btn btn-light position-fixed bottom-0 end-0 m-4 rounded-circle"
-            style={styles.scrollTop}
+            className={`btn btn-light position-fixed bottom-0 end-0 m-4 rounded-circle ${styles.scrollTop}`}
             onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
           >
             ↑
@@ -161,54 +155,3 @@ export default function HelpPage() {
     </div>
   );
 }
-
-const styles = {
-  mainTitle: {
-    fontFamily: "Inter",
-    fontSize: "40px",
-    fontWeight: 700,
-    color: "#000",
-  },
-  categoryTitle: {
-    fontFamily: "Inter",
-    fontSize: "30px",
-    fontWeight: 600,
-    color: "#000",
-  },
-  faqItem: {
-    background: "#6498B5",
-    cursor: "pointer",
-    transition: "all 0.3s ease",
-  },
-  numberBadge: {
-    fontFamily: "Inter",
-    fontSize: "28px",
-    fontWeight: 700,
-    minWidth: "50px",
-    color: "#0F5378",
-  },
-  question: {
-    fontFamily: "Inter",
-    fontSize: "22px",
-    fontWeight: 700,
-    color: "#000",
-  },
-  answer: {
-    fontFamily: "Inter",
-    fontSize: "16px",
-    fontWeight: 600,
-    color: "#000",
-    animation: "fadeIn 0.3s ease",
-  },
-  toggleIcon: {
-    fontSize: "32px",
-    fontWeight: 500,
-    color: "#000",
-    transition: "transform 0.3s ease",
-  },
-  scrollTop: {
-    width: "50px",
-    height: "50px",
-    boxShadow: "0 2px 5px rgba(0,0,0,0.2)",
-  },
-};
