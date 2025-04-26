@@ -1,11 +1,11 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import "./Landing.css";
-import pic from "../assets/Landing.png"; 
-import Navbar from "../components/Navbar"; 
+import pic from "../assets/Landing.png";
+import Navbar from "../components/Navbar";
 
 const Landing = () => {
-  const navigate = useNavigate(); 
+  const navigate = useNavigate();
 
   return (
     <>

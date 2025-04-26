@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { PieChart, Pie, Cell, Tooltip, ResponsiveContainer } from "recharts";
-import styles from './Home.module.css'; // استيراد CSS Module
+import styles from "./Home.module.css"; // استيراد CSS Module
 
 const COLORS = ["#4682B4", "#1E90FF", "#00CED1", "#5F9EA0", "#87CEFA"];
 
@@ -61,7 +61,12 @@ function Home() {
         <div className="col-md-6 mb-3">
           <div
             className={`p-4 text-white rounded text-center ${styles.bgSuccess}`}
-            style={{ height: "120px", display: "flex", flexDirection: "column", justifyContent: "center" }}
+            style={{
+              height: "120px",
+              display: "flex",
+              flexDirection: "column",
+              justifyContent: "center",
+            }}
           >
             <h5>Your Income</h5>
             <p>{income} L.E</p>
@@ -70,7 +75,12 @@ function Home() {
         <div className="col-md-6 mb-3">
           <div
             className={`p-4 text-white rounded text-center ${styles.bgInfo}`}
-            style={{ height: "120px", display: "flex", flexDirection: "column", justifyContent: "center" }}
+            style={{
+              height: "120px",
+              display: "flex",
+              flexDirection: "column",
+              justifyContent: "center",
+            }}
           >
             <h5>Total Savings</h5>
             <p>{totalSavings} L.E</p>
@@ -82,17 +92,21 @@ function Home() {
         {expenses.map((exp, index) => (
           <div className="col-md-4 mb-4" key={index}>
             <div
-              className={`p-3 text-white rounded h-100 text-center ${exp.category === "Savings"
-                ? styles.bgDanger
-                : index % 2 === 0
+              className={`p-3 text-white rounded h-100 text-center ${
+                exp.category === "Savings"
+                  ? styles.bgDanger
+                  : index % 2 === 0
                   ? styles.bgPrimary
-                  : styles.bgSecondary}`}
+                  : styles.bgSecondary
+              }`}
             >
               <div>{exp.category}</div>
               <div>{exp.amount} L.E</div>
               {exp.category === "Savings" && (
                 <div>
-                  <small className={styles.savingsText}>{monthsLeft} months left to reach your goal</small>
+                  <small className={styles.savingsText}>
+                    {monthsLeft} months left to reach your goal
+                  </small>
                 </div>
               )}
             </div>
@@ -100,7 +114,10 @@ function Home() {
         ))}
       </div>
 
-      <div className="py-4 px-3" style={{ backgroundColor: "#3DA4C6", borderRadius: "12px" }}>
+      <div
+        className="py-4 px-3"
+        style={{ backgroundColor: "#3DA4C6", borderRadius: "12px" }}
+      >
         <div className="row justify-content-center align-items-center">
           <div className="col-md-6">
             <h5 className="text-center mb-3">Expense Breakdown</h5>
@@ -117,8 +134,10 @@ function Home() {
                     fill="#8884d8"
                     label={({ cx, cy, midAngle, outerRadius, index }) => {
                       const radius = outerRadius + 15;
-                      const x = cx + radius * Math.cos(-midAngle * Math.PI / 180);
-                      const y = cy + radius * Math.sin(-midAngle * Math.PI / 180);
+                      const x =
+                        cx + radius * Math.cos((-midAngle * Math.PI) / 180);
+                      const y =
+                        cy + radius * Math.sin((-midAngle * Math.PI) / 180);
                       return (
                         <text
                           x={x}
@@ -128,7 +147,7 @@ function Home() {
                           dominantBaseline="middle"
                           style={{
                             fontSize: "14px",
-                            fontWeight: "bold"
+                            fontWeight: "bold",
                           }}
                         >
                           {pieData[index].percentage}%
@@ -138,7 +157,10 @@ function Home() {
                     labelLine={false}
                   >
                     {pieData.map((entry, index) => (
-                      <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
+                      <Cell
+                        key={`cell-${index}`}
+                        fill={COLORS[index % COLORS.length]}
+                      />
                     ))}
                   </Pie>
                   <Tooltip />

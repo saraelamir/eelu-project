@@ -1,0 +1,85 @@
+/* pages/Welcome/Welcome.module.css */
+.container {
+  min-height: 100vh;
+  padding-bottom: 1rem;
+  display: flex;
+  flex-direction: column;
+  background: var(--gradient-blue);
+}
+
+.contentContainer {
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+}
+
+.heading {
+  font-size: 64px;
+  font-weight: 700;
+  font-family: "Inter";
+  color: white;
+  margin-bottom: 1rem;
+}
+
+.subtitle {
+  font-size: 24px;
+  font-weight: 400;
+  font-family: "Inter";
+  color: white;
+  margin-bottom: 2rem;
+}
+
+.buttonContainer {
+  text-align: left;
+  margin-left: 0;
+  padding-left: 0;
+}
+
+.button {
+  background-color: #fff;
+  color: #0f5378;
+  font-size: 18px;
+  font-weight: 500;
+  font-family: "Inter";
+  border-radius: 50px;
+  padding: 1rem 2.5rem;
+  transition: all 0.3s ease;
+  display: inline-block;
+}
+
+.button:hover {
+  background-color: #e6e6e6;
+}
+
+.image {
+  max-width: 600px;
+  width: 100%;
+  height: auto;
+}
+
+@media (max-width: 768px) {
+  .heading {
+    font-size: 2rem;
+    text-align: center;
+  }
+
+  .subtitle {
+    font-size: 1rem;
+    text-align: center;
+  }
+
+  .buttonContainer {
+    text-align: center;
+  }
+
+  .button {
+    font-size: 0.875rem;
+    padding: 8px 20px;
+    display: block;
+  }
+
+  .image {
+    max-width: 80%;
+    margin: 0 auto;
+  }
+}

@@ -1,7 +1,7 @@
 .container {
   padding-right: 50px;
   padding-left: 50px;
-  background: linear-gradient(to bottom, #0F5378, #0F557A, #1B9ADE); 
+  background: linear-gradient(to bottom, #0f5378, #0f557a, #1b9ade);
 }
 
 .listUnstyled {
@@ -22,15 +22,15 @@
 }
 
 .bgPrimary {
-  background-color: #3DA4C6;
+  background-color: #3da4c6;
 }
 
 .bgSecondary {
-  background-color: #3DA4C6;
+  background-color: #3da4c6;
 }
 
 .bgSuccess {
-  background-color: #3DA4C6;
+  background-color: #3da4c6;
 }
 
 .bgInfo {
@@ -38,7 +38,7 @@
 }
 
 .bgDanger {
-  background-color: #3DA4C6;
+  background-color: #3da4c6;
 }
 
 .col-md-4 {
@@ -53,12 +53,14 @@
   text-align: center;
 }
 
-.bgSuccess h5, .bgInfo h5 {
+.bgSuccess h5,
+.bgInfo h5 {
   font-size: 1.5rem;
   font-weight: bold;
 }
 
-.bgSuccess p, .bgInfo p {
+.bgSuccess p,
+.bgInfo p {
   font-size: 1.2rem;
 }
 
@@ -67,11 +69,15 @@ h2 {
   font-weight: bold;
 }
 
-.bgPrimary h5, .bgSecondary h5, .bgDanger h5 {
+.bgPrimary h5,
+.bgSecondary h5,
+.bgDanger h5 {
   font-size: 1rem;
   font-weight: normal;
 }
 
-.bgPrimary p, .bgSecondary p, .bgDanger p {
+.bgPrimary p,
+.bgSecondary p,
+.bgDanger p {
   font-size: 1rem;
 }

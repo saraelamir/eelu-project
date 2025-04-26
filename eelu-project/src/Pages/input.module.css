@@ -1,5 +1,5 @@
 .inputPage {
-  background: linear-gradient(to bottom, #0F5378, #0F557A, #1B9ADE);
+  background: linear-gradient(to bottom, #0f5378, #0f557a, #1b9ade);
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
@@ -10,7 +10,7 @@
 }
 
 .inputContainer {
-  background-color: #D9D9D933;
+  background-color: #d9d9d933;
   border-radius: 20px;
   padding: 36px;
   padding-left: 60px;
@@ -48,7 +48,7 @@
   color: black;
   font-size: 24px;
   text-align: left;
-  font-family: 'Merriweather', serif;
+  font-family: "Merriweather", serif;
   padding-bottom: 15px;
 }
 
@@ -58,16 +58,16 @@
   margin-bottom: 20px;
   border-radius: 5px;
   padding: 10px;
-  background-color: #D9D9D9;
+  background-color: #d9d9d9;
 }
 
 .inputGroup label {
   font-weight: bold;
   color: #003566;
-  margin-right: 30px;  /* زيادة المسافة بين الـ label والـ input */
+  margin-right: 30px; /* زيادة المسافة بين الـ label والـ input */
   white-space: nowrap;
   font-size: 0.9rem;
-  width: 250px;  /* عرض ثابت للـ label */
+  width: 250px; /* عرض ثابت للـ label */
 }
 
 .inputField {
@@ -80,13 +80,13 @@
   box-shadow: none;
   outline: none;
   height: 30px;
-  width: 250px;  /* عرض ثابت لجميع الحقول */
+  width: 250px; /* عرض ثابت لجميع الحقول */
   margin-right: 10px;
 }
 
 .textarea {
   height: 150px;
-  width: 250px;  /* عرض ثابت للـ textarea */
+  width: 250px; /* عرض ثابت للـ textarea */
   resize: vertical;
   padding: 10px;
   border: 1px solid #ccc;
@@ -98,7 +98,7 @@
   height: 37px;
   text-align: center;
   border-radius: 10px;
-  background-color: #3DA4C6;
+  background-color: #3da4c6;
   margin-left: 10px;
   color: white;
   border: none;
@@ -112,7 +112,7 @@
 }
 
 .confirmBtn {
-  background-color: #3DA4C6;
+  background-color: #3da4c6;
   color: white;
   border: none;
   border-radius: 15px;

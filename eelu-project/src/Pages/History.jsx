@@ -1,12 +1,12 @@
-import React from 'react';
-import { PieChart as RechartsPieChart, Pie, Cell } from 'recharts';
-import styles from './history.module.css'; // استيراد CSS Module
+import React from "react";
+import { PieChart as RechartsPieChart, Pie, Cell } from "recharts";
+import styles from "./history.module.css"; // استيراد CSS Module
 
 function HistoryPage() {
   const plans = [
     {
       id: 1,
-      date: '1/3/2023',
+      date: "1/3/2023",
       expenses: {
         housing: 40,
         entertainment: 25,
@@ -17,7 +17,7 @@ function HistoryPage() {
     },
     {
       id: 2,
-      date: '2/2/2024',
+      date: "2/2/2024",
       expenses: {
         housing: 35,
         entertainment: 30,
@@ -28,7 +28,7 @@ function HistoryPage() {
     },
     {
       id: 3,
-      date: '1/5/2025',
+      date: "1/5/2025",
       expenses: {
         housing: 30,
         entertainment: 10,
@@ -39,7 +39,7 @@ function HistoryPage() {
     },
   ];
 
-  const COLORS = ['#87CEFA', '#1E90FF', '#00CED1', '#5F9EA0', '#3DB8E0'];
+  const COLORS = ["#87CEFA", "#1E90FF", "#00CED1", "#5F9EA0", "#3DB8E0"];
 
   return (
     <div className={styles.historyPage}>
@@ -60,14 +60,23 @@ function HistoryPage() {
                 <div className={styles.pieChartContainer}>
                   <RechartsPieChart width={250} height={250}>
                     <Pie
-                      data={Object.entries(plan.expenses).map(([name, value]) => ({ name, value }))}
+                      data={Object.entries(plan.expenses).map(
+                        ([name, value]) => ({ name, value })
+                      )}
                       dataKey="value"
                       nameKey="name"
                       cx="50%"
                       cy="50%"
                       outerRadius={80}
                       labelLine={false}
-                      label={({ name, value, cx, cy, midAngle, outerRadius }) => {
+                      label={({
+                        name,
+                        value,
+                        cx,
+                        cy,
+                        midAngle,
+                        outerRadius,
+                      }) => {
                         const RADIAN = Math.PI / 180;
                         const radius = outerRadius - 20;
                         const x = cx + radius * Math.cos(-midAngle * RADIAN);
@@ -88,7 +97,10 @@ function HistoryPage() {
                       }}
                     >
                       {Object.entries(plan.expenses).map((entry, index) => (
-                        <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
+                        <Cell
+                          key={`cell-${index}`}
+                          fill={COLORS[index % COLORS.length]}
+                        />
                       ))}
                     </Pie>
                   </RechartsPieChart>
@@ -99,13 +111,14 @@ function HistoryPage() {
                     <div className={styles.expenseItem} key={name}>
                       <span
                         className={styles.colorDot}
-                        style={{ backgroundColor: COLORS[index % COLORS.length] }}
+                        style={{
+                          backgroundColor: COLORS[index % COLORS.length],
+                        }}
                       ></span>
                       <span>{name}</span> {/* إظهار اسم الفئة فقط دون النسبة */}
                     </div>
                   ))}
                 </div>
-
               </div>
             </div>
           </div>

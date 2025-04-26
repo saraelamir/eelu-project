@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { Container } from "react-bootstrap";
-import styles from './Help.module.css';  // استيراد ملف CSS موديل
+import styles from "./Help.module.css"; // استيراد ملف CSS موديل
 
 export default function HelpPage() {
   const [openIndex, setOpenIndex] = useState({ category: -1, question: -1 });
@@ -98,7 +98,9 @@ export default function HelpPage() {
 
         {faqData.map((category, catIndex) => (
           <div key={catIndex} className="mb-5">
-            <h2 className={`mb-4 ${styles.categoryTitle}`}>{category.category}</h2>
+            <h2 className={`mb-4 ${styles.categoryTitle}`}>
+              {category.category}
+            </h2>
 
             {category.items.map((item, itemIndex) => {
               const questionNumber = (itemIndex + 1)
@@ -124,12 +126,16 @@ export default function HelpPage() {
                     }
                   >
                     <div className="d-flex align-items-center gap-4">
-                      <span className={styles.numberBadge}>{questionNumber}</span>
+                      <span className={styles.numberBadge}>
+                        {questionNumber}
+                      </span>
                       <h3 className={`mb-0 ${styles.question}`}>
                         {item.question}
                       </h3>
                     </div>
-                    <span className={styles.toggleIcon}>{isOpen ? "-" : "+"}</span>
+                    <span className={styles.toggleIcon}>
+                      {isOpen ? "-" : "+"}
+                    </span>
                   </div>
 
                   {isOpen && (

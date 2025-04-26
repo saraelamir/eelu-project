@@ -4,7 +4,7 @@
   align-items: flex-start; /* تأكد من محاذاة العناصر على اليسار */
   padding: 20px;
   font-family: sans-serif;
-  background: linear-gradient(to bottom, #0F5378, #0F557A, #1B9ADE);
+  background: linear-gradient(to bottom, #0f5378, #0f557a, #1b9ade);
   color: rgb(255, 255, 255);
 }
 
@@ -30,7 +30,7 @@
 }
 
 .square {
-  background-color:#6497B3;
+  background-color: #6497b3;
   color: black;
   border-radius: 8px;
   text-align: center;
@@ -47,7 +47,7 @@
 
 .rectangle {
   flex: 1;
-  background-color:#6497B3;
+  background-color: #6497b3;
   color: black;
   padding: 5px;
   height: 200px; /* ارتفاع المستطيل */
@@ -85,12 +85,12 @@
   display: flex;
   align-items: center;
   gap: 8px;
-  font-size: 20px; 
+  font-size: 20px;
 }
 
 .colorDot {
-  width: 20px; 
-  height: 20px; 
+  width: 20px;
+  height: 20px;
   border-radius: 50%;
   display: inline-block;
 }

@@ -2,14 +2,14 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: linear-gradient(to bottom, #0F5378, #0F557A, #1B9ADE); 
+  background: linear-gradient(to bottom, #0f5378, #0f557a, #1b9ade);
   padding: 50px 10%;
   /* max-width: 1200px; */
   margin: auto;
 }
 
 .hero {
-  flex: 1; 
+  flex: 1;
   text-align: left;
 }
 
@@ -30,7 +30,7 @@
   margin-top: 20px;
   padding: 12px 25px;
   border-radius: 8px;
-  background-color: #3DA4C6;
+  background-color: #3da4c6;
   color: white;
   font-size: 16px;
   font-weight: bold;
@@ -40,7 +40,7 @@
 }
 
 .hero button:hover {
-  background-color: #1B9ADE;
+  background-color: #1b9ade;
 }
 
 .hero-image {

@@ -34,13 +34,25 @@ export default function SavingGoalsPage() {
           <div className="bg-lightt text-dark px-3 py-2 rounded-3">
             <strong>Total Savings:</strong> L.E20000
           </div>
-          <div className="input-group mt-3 mt-md-0" style={{ maxWidth: "300px" }}>
+          <div
+            className="input-group mt-3 mt-md-0"
+            style={{ maxWidth: "300px" }}
+          >
             <input
               type="text"
-              className="form-control pr-5"  // added padding to the right to make space for the icon
+              className="form-control pr-5" // added padding to the right to make space for the icon
               placeholder="Search here..."
             />
-            <i className="fa fa-search position-absolute" style={{ right: "15px", top: "50%", transform: "translateY(-50%)", color: "#6c757d" }}></i> {/* Font Awesome search icon inside the input */}
+            <i
+              className="fa fa-search position-absolute"
+              style={{
+                right: "15px",
+                top: "50%",
+                transform: "translateY(-50%)",
+                color: "#6c757d",
+              }}
+            ></i>{" "}
+            {/* Font Awesome search icon inside the input */}
           </div>
         </div>
 
@@ -57,14 +69,19 @@ export default function SavingGoalsPage() {
 
             <div className="col-12 col-md-9">
               <div className="bg-lightt text-dark p-3 rounded h-100 rounded-4">
-                <p><strong>Goal Name:</strong> {goal.name}</p>
-                <p><strong>Goal Amount:</strong> {goal.amount}</p>
-                <p><strong>Monthly savings:</strong> {goal.monthly}</p>
+                <p>
+                  <strong>Goal Name:</strong> {goal.name}
+                </p>
+                <p>
+                  <strong>Goal Amount:</strong> {goal.amount}
+                </p>
+                <p>
+                  <strong>Monthly savings:</strong> {goal.monthly}
+                </p>
               </div>
             </div>
           </div>
         ))}
-
       </div>
     </div>
   );
